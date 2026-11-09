@@ -1,7 +1,9 @@
 # Deploy the static link page with GitHub Pages Actions.
-# Branch source (main / root) could not be enabled: the integration
-# received 403 "Resource not accessible by integration" (needs pages=write
-# or administration=write). This workflow is GitHub's supported Pages path.
+# Creating the site from this integration returned 403
+# "Resource not accessible by integration" (needs pages=write or
+# administration=write). The first Actions run then failed with
+# "Get Pages site failed... Not Found" because Pages was not enabled.
+# enablement lets this workflow's GitHub token create the Pages site.
 name: Deploy static content to Pages
 
 on:
@@ -29,6 +31,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
