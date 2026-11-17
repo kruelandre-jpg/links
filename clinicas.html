@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clínicas Proregen · Dr. André Kruel</title>
+    <meta
+      name="description"
+      content="Matriz da Proregen em Bento Gonçalves e clínicas afiliadas no Brasil. A matriz e 33 afiliadas em 13 estados e o DF."
+    />
+    <meta name="theme-color" content="#F4F9FC" />
+    <meta property="og:title" content="Clínicas Proregen · Dr. André Kruel" />
+    <meta
+      property="og:description"
+      content="A matriz e 33 afiliadas em 13 estados e o DF."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="icon" href="assets/symbol.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page-clinicas">
+    <main>
+      <header class="intro">
+        <a href="index.html" class="logo-link">
+          <img
+            class="logo"
+            src="assets/logo-horizontal.svg"
+            width="220"
+            height="77"
+            alt="Proregen"
+          />
+        </a>
+        <h1>Clínicas Proregen</h1>
+        <p class="role">Rede</p>
+        <p class="registry">A matriz e 33 afiliadas em 13 estados e o DF</p>
+        <p class="lede">
+          A matriz fica em Bento Gonçalves (RS), com o Dr. André Kruel.
+          As afiliadas têm equipe local. Tubarão (SC) aparece com dois endereços
+          e conta como uma afiliada.
+        </p>
+        <p class="lede lede-data">Lista oficial atualizada em 17/11/2026.</p>
+      </header>
+
+      
+<section class="mapa-wrap" aria-label="Mapa das clínicas">
+  <div id="mapa" role="application" aria-label="Mapa com a matriz e as clínicas afiliadas"></div>
+  <p class="mapa-nota">Os pinos usam o OpenStreetMap. Alguns caem na rua ou na cidade, não na porta exata.</p>
+</section>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function () {
+  var pontos = [{"nome": "Clínica Proregen (Matriz)", "cidade": "Bento Gonçalves", "uf": "RS", "lat": -29.1655631, "lon": -51.5144284, "matriz": true, "rotulo": "Matriz"}, {"nome": "Hospital Ortopédico de Passo Fundo", "cidade": "Passo Fundo", "uf": "RS", "lat": -28.2558958, "lon": -52.4148563, "matriz": false, "rotulo": "1"}, {"nome": "Proregen João Pessoa", "cidade": "João Pessoa", "uf": "PB", "lat": -7.1215981, "lon": -34.882028, "matriz": false, "rotulo": "2"}, {"nome": "Osteo Ortopedia", "cidade": "Criciúma", "uf": "SC", "lat": -28.6761266, "lon": -49.3630546, "matriz": false, "rotulo": "3"}, {"nome": "Revitalle", "cidade": "Florianópolis", "uf": "SC", "lat": -27.6121134, "lon": -48.5847102, "matriz": false, "rotulo": "4"}, {"nome": "Vitaville/Vitador Medicina da Dor e Regenerativa", "cidade": "Joinville", "uf": "SC", "lat": -26.3106179, "lon": -48.8431273, "matriz": false, "rotulo": "5"}, {"nome": "Proregen Tubarão (local 1: Ortoimagem Centro de Ortopedia)", "cidade": "Tubarão", "uf": "SC", "lat": -28.4807628, "lon": -49.0046278, "matriz": false, "rotulo": "6"}, {"nome": "Proregen Tubarão (local 2: Provida)", "cidade": "Tubarão", "uf": "SC", "lat": -28.4784454, "lon": -48.9990455, "matriz": false, "rotulo": "6"}, {"nome": "Proregen Santa Cruz do Sul", "cidade": "Santa Cruz do Sul", "uf": "RS", "lat": -29.7200512, "lon": -52.4261019, "matriz": false, "rotulo": "7"}, {"nome": "Núcleo AG", "cidade": "Marília", "uf": "SP", "lat": -22.2172002, "lon": -49.9500061, "matriz": false, "rotulo": "8"}, {"nome": "Clínica Ideal Center", "cidade": "Garanhuns", "uf": "PE", "lat": -8.8843847, "lon": -36.4818607, "matriz": false, "rotulo": "9"}, {"nome": "Proregen Porto Alegre", "cidade": "Porto Alegre", "uf": "RS", "lat": -30.1009166, "lon": -51.1887882, "matriz": false, "rotulo": "10"}, {"nome": "Clínica Malaquias", "cidade": "Xangri-Lá", "uf": "RS", "lat": -29.8039422, "lon": -50.0413748, "matriz": false, "rotulo": "11"}, {"nome": "Proregen Carazinho", "cidade": "Carazinho", "uf": "RS", "lat": -28.2981634, "lon": -52.7942363, "matriz": false, "rotulo": "12"}, {"nome": "Hospital Cazza", "cidade": "Chapecó", "uf": "SC", "lat": -27.1048922, "lon": -52.6107178, "matriz": false, "rotulo": "13"}, {"nome": "JK Ortopedia e Clínica da Dor", "cidade": "Brasília", "uf": "DF", "lat": -15.7939869, "lon": -47.8828, "matriz": false, "rotulo": "14"}, {"nome": "Somma Medicina Integrada", "cidade": "Santiago", "uf": "RS", "lat": -29.1970773, "lon": -54.8667895, "matriz": false, "rotulo": "15"}, {"nome": "Instituto Nobre", "cidade": "Macapá", "uf": "AP", "lat": 0.0323228, "lon": -51.0639336, "matriz": false, "rotulo": "16"}, {"nome": "CIDORE", "cidade": "Sobral", "uf": "CE", "lat": -3.8565437, "lon": -40.0438895, "matriz": false, "rotulo": "17"}, {"nome": "Clínica Regen", "cidade": "Goiânia", "uf": "GO", "lat": -16.680882, "lon": -49.2532691, "matriz": false, "rotulo": "18"}, {"nome": "Clínica Dr. Everton Fiebig", "cidade": "Joaçaba", "uf": "SC", "lat": -27.1737204, "lon": -51.5065214, "matriz": false, "rotulo": "19"}, {"nome": "Instituto Perez", "cidade": "Recife", "uf": "PE", "lat": -8.0584933, "lon": -34.8848193, "matriz": false, "rotulo": "20"}, {"nome": "Clínica Médica Maurmann & Modena", "cidade": "Nova Prata", "uf": "RS", "lat": -28.7849383, "lon": -51.6091999, "matriz": false, "rotulo": "21"}, {"nome": "Consultório Dr. Márcio Dutra", "cidade": "Lajeado", "uf": "RS", "lat": -29.4698886, "lon": -51.9636464, "matriz": false, "rotulo": "22"}, {"nome": "Clínica Dr. Davidson Alba - Neurocirurgião Coluna & Crânio", "cidade": "Santa Maria", "uf": "RS", "lat": -29.6896085, "lon": -53.8041503, "matriz": false, "rotulo": "23"}, {"nome": "Proregen Encantado", "cidade": "Encantado", "uf": "RS", "lat": -29.2392716, "lon": -51.8744817, "matriz": false, "rotulo": "24"}, {"nome": "Clínica Boas Novas", "cidade": "Ribeirão das Neves", "uf": "MG", "lat": -19.7672898, "lon": -44.0875436, "matriz": false, "rotulo": "25"}, {"nome": "Clínica Nidara", "cidade": "Palmas", "uf": "TO", "lat": -10.1837852, "lon": -48.3336423, "matriz": false, "rotulo": "26"}, {"nome": "Acqua Saúde e Imagem", "cidade": "Campo Grande", "uf": "MS", "lat": -20.4640173, "lon": -54.6162947, "matriz": false, "rotulo": "27"}, {"nome": "You Institute Saúde Personalizada", "cidade": "Canoinhas", "uf": "SC", "lat": -26.1755121, "lon": -50.3949592, "matriz": false, "rotulo": "28"}, {"nome": "Clínica Avivah", "cidade": "Belém", "uf": "PA", "lat": -1.45056, "lon": -48.4682453, "matriz": false, "rotulo": "29"}, {"nome": "Dr. Rodolfo Fonseca de Padua Gonçalves", "cidade": "Lavras", "uf": "MG", "lat": -21.2425512, "lon": -44.9991978, "matriz": false, "rotulo": "30"}, {"nome": "Clínica Santa Mônica", "cidade": "Lucas do Rio Verde", "uf": "MT", "lat": -13.0728844, "lon": -55.9288318, "matriz": false, "rotulo": "31"}, {"nome": "Instituto de Saúde", "cidade": "Itapeva", "uf": "SP", "lat": -23.9825298, "lon": -48.8772473, "matriz": false, "rotulo": "32"}, {"nome": "Clínica Dworzecki", "cidade": "Camaquã", "uf": "RS", "lat": -30.8524752, "lon": -51.8075619, "matriz": false, "rotulo": "33"}];
+  var mapa = document.getElementById("mapa");
+  if (!mapa || !window.L || !pontos.length) return;
+  var map = L.map("mapa", { scrollWheelZoom: false });
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap",
+    maxZoom: 18
+  }).addTo(map);
+  var bounds = [];
+  pontos.forEach(function (p) {
+    var cor = p.matriz ? "#3a3c38" : "#66b2e0";
+    var icon = L.divIcon({
+      className: p.matriz ? "pin pin-matriz" : "pin",
+      html: '<span style="background:' + cor + '"></span>',
+      iconSize: [22, 22],
+      iconAnchor: [11, 11]
+    });
+    var titulo = p.matriz ? "Matriz · " + p.nome : p.nome;
+    var m = L.marker([p.lat, p.lon], { icon: icon }).addTo(map);
+    m.bindPopup("<strong>" + titulo + "</strong><br>" + (p.cidade || "") + " · " + (p.uf || ""));
+    bounds.push([p.lat, p.lon]);
+  });
+  map.fitBounds(bounds, { padding: [28, 28], maxZoom: 6 });
+})();
+</script>
+
+
+      <div class="lista-clinicas">
+        <section class="bloco-matriz" aria-labelledby="titulo-matriz">
+<h2 id="titulo-matriz">Matriz</h2>
+<article class="clinic-card matriz-card" data-numero="Matriz" data-uf="RS">
+  <header class="clinic-head"><span class="badge">Matriz</span><h3>Clínica Proregen (Matriz)</h3></header>
+  
+  <p class="clinic-addr">Rua Dr. José Mário Mônaco, 333 — sala 302, Centro Comercial São Lucas<br />Centro<br />Bento Gonçalves, RS · 95700-066</p>
+  <p class="clinic-links"><a href="tel:+555437020302">(54) 3702-0302</a> · <a href="tel:+5554996891295">(54) 99689-1295</a> · <a href="https://www.instagram.com/dr.andrekruel/" target="_blank" rel="noopener noreferrer">@dr.andrekruel</a> · <a href="https://www.instagram.com/drscarton/" target="_blank" rel="noopener noreferrer">@drscarton</a> · <a href="https://www.instagram.com/ortogava/" target="_blank" rel="noopener noreferrer">@ortogava</a></p>
+  
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-rs" id="uf-rs">
+<h2 id="uf-rs-titulo">Rio Grande do Sul <span>(RS)</span></h2>
+<article class="clinic-card" data-numero="1" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 1</span><h3>Hospital Ortopédico de Passo Fundo</h3></header>
+  
+  <p class="clinic-addr">Avenida Sete de Setembro, 817<br />Centro<br />Passo Fundo, RS · 99010-121</p>
+  <p class="clinic-links"><a href="tel:+555421044333">(54) 2104-4333</a> · <a href="https://www.instagram.com/hohospitalortopedico/" target="_blank" rel="noopener noreferrer">@hohospitalortopedico</a> · <a href="https://www.hopf.med.br/" target="_blank" rel="noopener noreferrer">hopf.med.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="7" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 7</span><h3>Proregen Santa Cruz do Sul</h3></header>
+  
+  <p class="clinic-addr">Rua Marechal Deodoro, 949 — 202<br />Centro<br />Santa Cruz do Sul, RS · 96810-102</p>
+  <p class="clinic-links"><a href="tel:+5551997666369">(51) 99766-6369</a> · <a href="https://www.instagram.com/dr.robert.wagner/" target="_blank" rel="noopener noreferrer">@dr.robert.wagner</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="10" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 10</span><h3>Proregen Porto Alegre</h3></header>
+  
+  <p class="clinic-addr">Rua Gomes Jardim, 201 — sala 617<br />Santana<br />Porto Alegre, RS · 90620-130</p>
+  <p class="clinic-links"><a href="tel:+5551995859722">(51) 99585-9722</a> · <a href="https://www.instagram.com/joao_mauro/" target="_blank" rel="noopener noreferrer">@joao_mauro</a> · <a href="https://www.instagram.com/drotavioortopedista/" target="_blank" rel="noopener noreferrer">@drotavioortopedista</a> · <a href="https://www.instagram.com/dralessandrotraumato/" target="_blank" rel="noopener noreferrer">@dralessandrotraumato</a> · <a href="https://drjoaomauro.com.br/" target="_blank" rel="noopener noreferrer">drjoaomauro.com.br</a> · <a href="https://www.ortopediaportoalegre.com.br/" target="_blank" rel="noopener noreferrer">ortopediaportoalegre.com.br</a> · <a href="https://dralessandrotraumatologia.com.br/" target="_blank" rel="noopener noreferrer">dralessandrotraumatologia.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="11" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 11</span><h3>Clínica Malaquias</h3></header>
+  
+  <p class="clinic-addr">Rua Elias João Medeiros, 2002 — salas 411 e 412<br />Bairro Santorini<br />Xangri-Lá, RS · 95588-000</p>
+  <p class="clinic-links"><a href="tel:+5551997781020">(51) 99778-1020</a> · <a href="https://www.instagram.com/dreduardomalaquias/" target="_blank" rel="noopener noreferrer">@dreduardomalaquias</a> · <a href="https://www.instagram.com/drjarbasmartini/" target="_blank" rel="noopener noreferrer">@drjarbasmartini</a> · <a href="https://clinicamalaquias.com.br/" target="_blank" rel="noopener noreferrer">clinicamalaquias.com.br</a> · <a href="https://drjarbasmartini.com.br/" target="_blank" rel="noopener noreferrer">drjarbasmartini.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="12" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 12</span><h3>Proregen Carazinho</h3></header>
+  
+  <p class="clinic-addr">Carazinho, RS</p>
+  <p class="clinic-links"><a href="https://www.instagram.com/drnelsonesteve/" target="_blank" rel="noopener noreferrer">@drnelsonesteve</a> · <a href="https://www.instagram.com/gilbertoamaral66/" target="_blank" rel="noopener noreferrer">@gilbertoamaral66</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="15" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 15</span><h3>Somma Medicina Integrada</h3></header>
+  
+  <p class="clinic-addr">Rua Sete de Setembro, 510<br />Centro<br />Santiago, RS · 97700-240</p>
+  <p class="clinic-links"><a href="tel:+55999544114">(55) 99954-4114</a> · <a href="tel:+55999316105">(55) 99931-6105</a> · <a href="https://www.instagram.com/drjulianosilva/" target="_blank" rel="noopener noreferrer">@drjulianosilva</a> · <a href="https://www.instagram.com/sommamedicinaintegrada/" target="_blank" rel="noopener noreferrer">@sommamedicinaintegrada</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="21" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 21</span><h3>Clínica Médica Maurmann &amp; Modena</h3></header>
+  
+  <p class="clinic-addr">Rua Cônego Peres, 690 — sala 701<br />Centro<br />Nova Prata, RS · 95320-000</p>
+  <p class="clinic-links"><a href="tel:+5554999442825">(54) 99944-2825</a> · <a href="tel:+555432427059">(54) 3242-7059</a> · <a href="https://www.instagram.com/clinicamaurmannmodena/" target="_blank" rel="noopener noreferrer">@clinicamaurmannmodena</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="22" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 22</span><h3>Consultório Dr. Márcio Dutra</h3></header>
+  
+  <p class="clinic-addr">Avenida Benjamin Constant, 1126 — sala 303<br />Centro<br />Lajeado, RS · 95900-104</p>
+  <p class="clinic-links"><a href="tel:+5551995967171">(51) 99596-7171</a> · <a href="https://www.instagram.com/dr.marciodutra/" target="_blank" rel="noopener noreferrer">@dr.marciodutra</a> · <a href="https://www.drmarciodutra.com.br/" target="_blank" rel="noopener noreferrer">drmarciodutra.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="23" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 23</span><h3>Clínica Dr. Davidson Alba - Neurocirurgião Coluna &amp; Crânio</h3></header>
+  
+  <p class="clinic-addr">Rua Pinheiro Machado, 2366 — 603<br />Centro<br />Santa Maria, RS · 97050-600</p>
+  <p class="clinic-links"><a href="tel:+55999621463">(55) 99962-1463</a> · <a href="tel:+5532225188">(55) 3222-5188</a> · <a href="https://www.instagram.com/dr_davidson_alba/" target="_blank" rel="noopener noreferrer">@dr_davidson_alba</a> · <a href="https://drdavidsonalba.com.br/" target="_blank" rel="noopener noreferrer">drdavidsonalba.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="24" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 24</span><h3>Proregen Encantado</h3></header>
+  
+  <p class="clinic-addr">Rua Duque de Caxias, 411 — sala 302<br />Centro<br />Encantado, RS · 95960-000</p>
+  <p class="clinic-links"><a href="tel:+5551980334036">(51) 98033-4036</a> · <a href="tel:+555136201073">(51) 3620-1073</a> · <a href="https://www.instagram.com/luizhboaro/" target="_blank" rel="noopener noreferrer">@luizhboaro</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="33" data-uf="RS">
+  <header class="clinic-head"><span class="clinic-num">nº 33</span><h3>Clínica Dworzecki</h3></header>
+  
+  <p class="clinic-addr">Rua Júlio de Castilhos, 755 — sala 2<br />Centro<br />Camaquã, RS · 96780-072</p>
+  <p class="clinic-links"><a href="tel:+555136711201">(51) 3671-1201</a> · <a href="https://www.instagram.com/marcelo.dworzecki/" target="_blank" rel="noopener noreferrer">@marcelo.dworzecki</a> · <a href="https://www.instagram.com/jaquelinelessapinheiro/" target="_blank" rel="noopener noreferrer">@jaquelinelessapinheiro</a></p>
+  <p class="clinic-obs">Unique</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-ap" id="uf-ap">
+<h2 id="uf-ap-titulo">Amapá <span>(AP)</span></h2>
+<article class="clinic-card" data-numero="16" data-uf="AP">
+  <header class="clinic-head"><span class="clinic-num">nº 16</span><h3>Instituto Nobre</h3></header>
+  
+  <p class="clinic-addr">Avenida Antônio Coelho de Carvalho, 1107<br />Central<br />Macapá, AP · 68900-015</p>
+  <p class="clinic-links"><a href="tel:+5596991945377">(96) 99194-5377</a> · <a href="tel:+5596991912303">(96) 99191-2303</a> · <a href="https://www.instagram.com/institutonobre.ap/" target="_blank" rel="noopener noreferrer">@institutonobre.ap</a> · <a href="https://www.instagram.com/drenzionobre/" target="_blank" rel="noopener noreferrer">@drenzionobre</a> · <a href="https://www.instagram.com/drarafaellanobre/" target="_blank" rel="noopener noreferrer">@drarafaellanobre</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-ce" id="uf-ce">
+<h2 id="uf-ce-titulo">Ceará <span>(CE)</span></h2>
+<article class="clinic-card" data-numero="17" data-uf="CE">
+  <header class="clinic-head"><span class="clinic-num">nº 17</span><h3>CIDORE</h3></header>
+  
+  <p class="clinic-addr">Avenida Monsenhor José Aloísio Pinto, 1362 — salas 221/222<br />Gerardo Cristino<br />Sobral, CE · 62051-225</p>
+  <p class="clinic-links"><a href="tel:+5588992756141">(88) 99275-6141</a> · <a href="https://www.instagram.com/drthiagomontalverne/" target="_blank" rel="noopener noreferrer">@drthiagomontalverne</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-df" id="uf-df">
+<h2 id="uf-df-titulo">Distrito Federal <span>(DF)</span></h2>
+<article class="clinic-card" data-numero="14" data-uf="DF">
+  <header class="clinic-head"><span class="clinic-num">nº 14</span><h3>JK Ortopedia e Clínica da Dor</h3></header>
+  
+  <p class="clinic-addr">Quadra QNL 30 Conjunto A, Lotes 2, 4 e 6 — Loja 3<br />Taguatinga Norte<br />Brasília, DF · 72162-301</p>
+  <p class="clinic-links"><a href="tel:+556134917488">(61) 3491-7488</a> · <a href="tel:+5561996234383">(61) 99623-4383</a> · <a href="https://www.instagram.com/jkortopedia/" target="_blank" rel="noopener noreferrer">@jkortopedia</a> · <a href="https://www.instagram.com/dralessandroleite/" target="_blank" rel="noopener noreferrer">@dralessandroleite</a> · <a href="https://www.instagram.com/dr.lucassena/" target="_blank" rel="noopener noreferrer">@dr.lucassena</a> · <a href="https://ortopediajk.com.br/" target="_blank" rel="noopener noreferrer">ortopediajk.com.br</a> · <a href="https://drlucassena.com.br/" target="_blank" rel="noopener noreferrer">drlucassena.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-go" id="uf-go">
+<h2 id="uf-go-titulo">Goiás <span>(GO)</span></h2>
+<article class="clinic-card" data-numero="18" data-uf="GO">
+  <header class="clinic-head"><span class="clinic-num">nº 18</span><h3>Clínica Regen</h3></header>
+  
+  <p class="clinic-addr">Avenida T04, 1340 — salas 109 a 116<br />Setor Bueno<br />Goiânia, GO · 74230-030</p>
+  <p class="clinic-links"><a href="tel:+5562991297532">(62) 99129-7532</a> · <a href="https://www.instagram.com/clinicaregen/" target="_blank" rel="noopener noreferrer">@clinicaregen</a> · <a href="https://clinicaregen.com.br/" target="_blank" rel="noopener noreferrer">clinicaregen.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-mg" id="uf-mg">
+<h2 id="uf-mg-titulo">Minas Gerais <span>(MG)</span></h2>
+<article class="clinic-card" data-numero="25" data-uf="MG">
+  <header class="clinic-head"><span class="clinic-num">nº 25</span><h3>Clínica Boas Novas</h3></header>
+  
+  <p class="clinic-addr">Rua José Alexandre de Freitas, 14<br />Bela Vista<br />Ribeirão das Neves, MG · 33805-160</p>
+  <p class="clinic-links"><a href="tel:+553136251335">(31) 3625-1335</a> · <a href="https://www.instagram.com/clinicaboasnovas/" target="_blank" rel="noopener noreferrer">@clinicaboasnovas</a> · <a href="https://hospitalboasnovas.com.br/" target="_blank" rel="noopener noreferrer">hospitalboasnovas.com.br</a></p>
+  <p class="clinic-obs">Unique</p>
+</article>
+<article class="clinic-card" data-numero="30" data-uf="MG">
+  <header class="clinic-head"><span class="clinic-num">nº 30</span><h3>Dr. Rodolfo Fonseca de Padua Gonçalves</h3></header>
+  
+  <p class="clinic-addr">Av. Dra. Damina Zakhian, 33<br />Centro<br />Lavras, MG · 37200-164</p>
+  <p class="clinic-links"><a href="tel:+553538214755">(35) 3821-4755</a> · <a href="tel:+5535999541409">(35) 99954-1409</a> · <a href="https://www.instagram.com/rodolfo.ortopedia/" target="_blank" rel="noopener noreferrer">@rodolfo.ortopedia</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-ms" id="uf-ms">
+<h2 id="uf-ms-titulo">Mato Grosso do Sul <span>(MS)</span></h2>
+<article class="clinic-card" data-numero="27" data-uf="MS">
+  <header class="clinic-head"><span class="clinic-num">nº 27</span><h3>Acqua Saúde e Imagem</h3></header>
+  
+  <p class="clinic-addr">Rua Alagoas, 396 — sala 1006, Ed. Atrium<br />Jardim dos Estados<br />Campo Grande, MS · 79020-120</p>
+  <p class="clinic-links"><a href="tel:+5567981202741">(67) 98120-2741</a> · <a href="https://www.instagram.com/drdanieltomazlopes/" target="_blank" rel="noopener noreferrer">@drdanieltomazlopes</a> · <a href="https://acquasaude.com/" target="_blank" rel="noopener noreferrer">acquasaude.com</a></p>
+  <p class="clinic-obs">Unique</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-mt" id="uf-mt">
+<h2 id="uf-mt-titulo">Mato Grosso <span>(MT)</span></h2>
+<article class="clinic-card" data-numero="31" data-uf="MT">
+  <header class="clinic-head"><span class="clinic-num">nº 31</span><h3>Clínica Santa Mônica</h3></header>
+  
+  <p class="clinic-addr">Av. Rio Grande do Sul, 877S<br />Menino Deus<br />Lucas do Rio Verde, MT · 78466-507</p>
+  <p class="clinic-links"><a href="tel:+556535495230">(65) 3549-5230</a> · <a href="https://www.instagram.com/drpaulomarquesjr/" target="_blank" rel="noopener noreferrer">@drpaulomarquesjr</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-pa" id="uf-pa">
+<h2 id="uf-pa-titulo">Pará <span>(PA)</span></h2>
+<article class="clinic-card" data-numero="29" data-uf="PA">
+  <header class="clinic-head"><span class="clinic-num">nº 29</span><h3>Clínica Avivah</h3></header>
+  
+  <p class="clinic-addr">Rua dos Mundurucos, 3100 — Ed. Metropolitan Tower, sobreloja sala 10<br />Belém, PA · 66040-033</p>
+  <p class="clinic-links"><a href="tel:+5591985528000">(91) 98552-8000</a> · <a href="https://www.instagram.com/clinica.avivah/" target="_blank" rel="noopener noreferrer">@clinica.avivah</a> · <a href="https://www.instagram.com/draataide/" target="_blank" rel="noopener noreferrer">@draataide</a></p>
+  <p class="clinic-obs">Unique</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-pb" id="uf-pb">
+<h2 id="uf-pb-titulo">Paraíba <span>(PB)</span></h2>
+<article class="clinic-card" data-numero="2" data-uf="PB">
+  <header class="clinic-head"><span class="clinic-num">nº 2</span><h3>Proregen João Pessoa</h3></header>
+  
+  <p class="clinic-addr">Avenida Senador Ruy Carneiro, 333 — sala 901<br />Brisamar<br />João Pessoa, PB · 58032-100</p>
+  <p class="clinic-links"><a href="tel:+5583991666167">(83) 99166-6167</a> · <a href="https://www.instagram.com/dr.lucasmmedeiros/" target="_blank" rel="noopener noreferrer">@dr.lucasmmedeiros</a> · <a href="https://www.instagram.com/proregenjp/" target="_blank" rel="noopener noreferrer">@proregenjp</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-pe" id="uf-pe">
+<h2 id="uf-pe-titulo">Pernambuco <span>(PE)</span></h2>
+<article class="clinic-card" data-numero="9" data-uf="PE">
+  <header class="clinic-head"><span class="clinic-num">nº 9</span><h3>Clínica Ideal Center</h3></header>
+  
+  <p class="clinic-addr">Avenida Rui Barbosa, 1401<br />Heliópolis<br />Garanhuns, PE · 55297-050</p>
+  <p class="clinic-links"><a href="tel:+5587998081593">(87) 99808-1593</a> · <a href="https://www.instagram.com/drricardoortopedista/" target="_blank" rel="noopener noreferrer">@drricardoortopedista</a> · <a href="https://www.instagram.com/proregengaranhuns/" target="_blank" rel="noopener noreferrer">@proregengaranhuns</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="20" data-uf="PE">
+  <header class="clinic-head"><span class="clinic-num">nº 20</span><h3>Instituto Perez</h3></header>
+  
+  <p class="clinic-addr">Rua Senador José Henrique, 231 — sala 1402<br />Ilha do Leite<br />Recife, PE · 50070-460</p>
+  <p class="clinic-links"><a href="tel:+5581986040181">(81) 98604-0181</a> · <a href="https://www.instagram.com/drjoseluizperez/" target="_blank" rel="noopener noreferrer">@drjoseluizperez</a> · <a href="https://drjoseluizperez.com.br/" target="_blank" rel="noopener noreferrer">drjoseluizperez.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-sc" id="uf-sc">
+<h2 id="uf-sc-titulo">Santa Catarina <span>(SC)</span></h2>
+<article class="clinic-card" data-numero="3" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 3</span><h3>Osteo Ortopedia</h3></header>
+  
+  <p class="clinic-addr">Rua João Cechinel, 368<br />Pio Corrêa<br />Criciúma, SC · 88811-500</p>
+  <p class="clinic-links"><a href="tel:+554834371788">(48) 3437-1788</a> · <a href="https://www.instagram.com/osteoortopedia/" target="_blank" rel="noopener noreferrer">@osteoortopedia</a> · <a href="https://osteoortopedia.com.br/" target="_blank" rel="noopener noreferrer">osteoortopedia.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="4" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 4</span><h3>Revitalle</h3></header>
+  
+  <p class="clinic-addr">Rua General Estilac Leal, 122<br />Coqueiros<br />Florianópolis, SC · 88080-760</p>
+  <p class="clinic-links"><a href="tel:+5548991881044">(48) 99188-1044</a> · <a href="https://www.instagram.com/drpedrokanan/" target="_blank" rel="noopener noreferrer">@drpedrokanan</a> · <a href="https://www.instagram.com/drstefanzolin/" target="_blank" rel="noopener noreferrer">@drstefanzolin</a> · <a href="https://www.instagram.com/dr.viniciusbotelho/" target="_blank" rel="noopener noreferrer">@dr.viniciusbotelho</a> · <a href="https://www.instagram.com/drleandrodavid/" target="_blank" rel="noopener noreferrer">@drleandrodavid</a> · <a href="https://revitalle.com.br/" target="_blank" rel="noopener noreferrer">revitalle.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="5" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 5</span><h3>Vitaville/Vitador Medicina da Dor e Regenerativa</h3></header>
+  
+  <p class="clinic-addr">Rua São Paulo, 348<br />Bucarein<br />Joinville, SC · 89202-200</p>
+  <p class="clinic-links"><a href="https://www.instagram.com/clinica.vitavilleoficial/" target="_blank" rel="noopener noreferrer">@clinica.vitavilleoficial</a> · <a href="https://www.instagram.com/vitador.oficial/" target="_blank" rel="noopener noreferrer">@vitador.oficial</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="6" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 6</span><h3>Proregen Tubarão (local 1: Ortoimagem Centro de Ortopedia)</h3></header>
+  <p class="clinic-local">Local 1</p>
+  <p class="clinic-addr">Rua Padre Bernardo Freuser, 228<br />Centro<br />Tubarão, SC · 88701-140</p>
+  <p class="clinic-links"><a href="tel:+554836311400">(48) 3631-1400</a> · <a href="tel:+554836311515">(48) 3631-1515</a> · <a href="tel:+554836311500">(48) 3631-1500</a> · <a href="https://www.instagram.com/dr.fabriciozanella/" target="_blank" rel="noopener noreferrer">@dr.fabriciozanella</a> · <a href="https://drfabriciozanella.com.br/" target="_blank" rel="noopener noreferrer">drfabriciozanella.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="6" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 6</span><h3>Proregen Tubarão (local 2: Provida)</h3></header>
+  <p class="clinic-local">Local 2</p>
+  <p class="clinic-addr">Avenida Marcolino Martins Cabral, 2075<br />Vila Moema<br />Tubarão, SC · 88705-001</p>
+  <p class="clinic-links"><a href="tel:+554836311400">(48) 3631-1400</a> · <a href="tel:+554836311515">(48) 3631-1515</a> · <a href="tel:+554836311500">(48) 3631-1500</a> · <a href="https://www.instagram.com/dr.fabriciozanella/" target="_blank" rel="noopener noreferrer">@dr.fabriciozanella</a> · <a href="https://drfabriciozanella.com.br/" target="_blank" rel="noopener noreferrer">drfabriciozanella.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="13" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 13</span><h3>Hospital Cazza</h3></header>
+  
+  <p class="clinic-addr">Rua Rui Barbosa - D, 200 D<br />Centro<br />Chapecó, SC · 89801-042</p>
+  <p class="clinic-links"><a href="tel:+5547984677050">(47) 98467-7050</a> · <a href="https://www.instagram.com/dr.felipilazzari/" target="_blank" rel="noopener noreferrer">@dr.felipilazzari</a> · <a href="https://www.lazzarimed.com.br/" target="_blank" rel="noopener noreferrer">lazzarimed.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="19" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 19</span><h3>Clínica Dr. Everton Fiebig</h3></header>
+  
+  <p class="clinic-addr">Av. Santa Terezinha, 243 — sala 5<br />Centro<br />Joaçaba, SC · 89600-000</p>
+  <p class="clinic-links"><a href="tel:+5549999636771">(49) 99963-6771</a> · <a href="https://www.instagram.com/dr.evertonfiebig/" target="_blank" rel="noopener noreferrer">@dr.evertonfiebig</a> · <a href="https://drevertonfiebig.com.br/" target="_blank" rel="noopener noreferrer">drevertonfiebig.com.br</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="28" data-uf="SC">
+  <header class="clinic-head"><span class="clinic-num">nº 28</span><h3>You Institute Saúde Personalizada</h3></header>
+  
+  <p class="clinic-addr">Rua Frei Menandro Kamps, 257 — sala 103<br />Centro<br />Canoinhas, SC · 89460-126</p>
+  <p class="clinic-links"><a href="tel:+5547991112699">(47) 99111-2699</a> · <a href="https://www.instagram.com/youinstitutecanoinhas/" target="_blank" rel="noopener noreferrer">@youinstitutecanoinhas</a></p>
+  <p class="clinic-obs">Unique</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-sp" id="uf-sp">
+<h2 id="uf-sp-titulo">São Paulo <span>(SP)</span></h2>
+<article class="clinic-card" data-numero="8" data-uf="SP">
+  <header class="clinic-head"><span class="clinic-num">nº 8</span><h3>Núcleo AG</h3></header>
+  
+  <p class="clinic-addr">Rua Bororós, 326<br />Senador Salgado Filho<br />Marília, SP · 17502-270</p>
+  <p class="clinic-links"><a href="tel:+5514999015002">(14) 99901-5002</a> · <a href="https://www.instagram.com/dr.adrianogarciacirino/" target="_blank" rel="noopener noreferrer">@dr.adrianogarciacirino</a> · <a href="https://www.instagram.com/clinica.nucleoag/" target="_blank" rel="noopener noreferrer">@clinica.nucleoag</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+<article class="clinic-card" data-numero="32" data-uf="SP">
+  <header class="clinic-head"><span class="clinic-num">nº 32</span><h3>Instituto de Saúde</h3></header>
+  
+  <p class="clinic-addr">Rua Mário Prandini, 742<br />Centro<br />Itapeva, SP · 18400-170</p>
+  <p class="clinic-links"><a href="tel:+551535218307">(15) 3521-8307</a> · <a href="tel:+5515991662361">(15) 99166-2361 (WhatsApp)</a> · <a href="https://www.instagram.com/everton.ortop/" target="_blank" rel="noopener noreferrer">@everton.ortop</a></p>
+  <p class="clinic-obs">Regular</p>
+</article>
+</section>
+<section class="bloco-uf" aria-labelledby="uf-to" id="uf-to">
+<h2 id="uf-to-titulo">Tocantins <span>(TO)</span></h2>
+<article class="clinic-card" data-numero="26" data-uf="TO">
+  <header class="clinic-head"><span class="clinic-num">nº 26</span><h3>Clínica Nidara</h3></header>
+  
+  <p class="clinic-addr">Quadra ARSE 41, Alameda 11, s/n, Lote 3, QR 13<br />Plano Diretor Sul<br />Palmas, TO · 77021-641</p>
+  <p class="clinic-links"><a href="tel:+5563999335006">(63) 99933-5006</a> · <a href="https://www.instagram.com/clinicanidara/" target="_blank" rel="noopener noreferrer">@clinicanidara</a> · <a href="https://www.instagram.com/drpedroflorindo/" target="_blank" rel="noopener noreferrer">@drpedroflorindo</a></p>
+  <p class="clinic-obs">Unique</p>
+</article>
+</section>
+      </div>
+
+      <p class="back">
+        <a href="index.html">Voltar aos links</a>
+      </p>
+
+      <footer class="footer">
+        <nav class="social" aria-label="Redes">
+          <a
+            href="https://www.instagram.com/dr.andrekruel/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+            <span class="sr-only">Abre em uma nova aba.</span>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UC19XxhiJrYcz3rzI4o6zwag"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+            <span class="sr-only">Abre em uma nova aba.</span>
+          </a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

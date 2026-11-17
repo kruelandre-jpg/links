@@ -315,3 +315,184 @@ h1 {
     scroll-behavior: auto;
   }
 }
+
+
+.cta span:not(.sr-only) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.cta-count {
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.35;
+  opacity: 0.82;
+}
+
+/* Diretório de clínicas */
+.page-clinicas main {
+  width: min(44rem, 100%);
+}
+
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.lede-data {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.mapa-wrap {
+  margin-top: 2.1rem;
+}
+
+#mapa {
+  width: 100%;
+  height: min(22rem, 58vw);
+  min-height: 16rem;
+  border-radius: 1.05rem;
+  border: 1.5px solid var(--line);
+  overflow: hidden;
+  background: #e8f2f8;
+}
+
+.mapa-nota,
+.back,
+.clinic-obs,
+.clinic-local {
+  margin: 0.55rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--ink);
+}
+
+.lista-clinicas {
+  margin-top: 2.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.bloco-matriz h2,
+.bloco-uf h2 {
+  margin: 0 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.bloco-uf h2 span {
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.clinic-card {
+  margin-bottom: 0.7rem;
+  padding: 1rem 1.1rem 1.05rem;
+  border: 1.5px solid var(--line);
+  border-radius: 1.05rem;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.matriz-card {
+  border-color: var(--ink);
+  box-shadow: 0 10px 26px rgba(58, 60, 56, 0.08);
+}
+
+.clinic-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem 0.7rem;
+}
+
+.clinic-head h3 {
+  margin: 0;
+  flex: 1 1 12rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.clinic-num {
+  font-size: 0.78rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.clinic-addr,
+.clinic-links {
+  margin: 0.45rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.clinic-links a,
+.back a {
+  color: var(--ink);
+  font-weight: 500;
+  text-underline-offset: 0.22em;
+}
+
+.clinic-obs,
+.clinic-local,
+.clinic-addr,
+.clinic-links {
+  text-align: left;
+}
+
+.back {
+  margin-top: 2.2rem;
+}
+
+.pin {
+  background: transparent;
+  border: 0;
+}
+
+.pin span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 4px auto 0;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(58, 60, 56, 0.25);
+}
+
+.pin-matriz span {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 800px) {
+  .page-clinicas main {
+    width: min(50rem, 100%);
+  }
+
+  #mapa {
+    height: 24rem;
+  }
+}

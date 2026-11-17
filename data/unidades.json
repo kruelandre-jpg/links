@@ -1,0 +1,1265 @@
+{
+  "meta": {
+    "fonte": "Planilha oficial enviada por André Kruel em 17/11/2026 (abas Unidades e Corpo Clínico), já com a matriz na primeira linha. Origem declarada na planilha: sistema Proregen, informações da equipe e pesquisa, atualizado em 17/11/2026. Uma versão anterior do mesmo dia, sem a matriz na aba Unidades, foi substituída por esta.",
+    "arquivo_origem": "clinicas-proregen-2026-11-17.xlsx",
+    "atualizado_em": "2026-11-17",
+    "versao": 1,
+    "total_matriz": 1,
+    "total_afiliadas": 33,
+    "total_unidades_incluindo_matriz": 34,
+    "total_locais": 35,
+    "estados": 13,
+    "inclui_df": true,
+    "ufs": [
+      "AP",
+      "CE",
+      "DF",
+      "GO",
+      "MG",
+      "MS",
+      "MT",
+      "PA",
+      "PB",
+      "PE",
+      "RS",
+      "SC",
+      "SP",
+      "TO"
+    ],
+    "texto_contagem": "a matriz e 33 afiliadas em 13 estados e o DF",
+    "observacoes": [
+      "A matriz (Clínica Proregen, Bento Gonçalves/RS) vem na primeira linha, com Nº = \"Matriz\" e Obs. = Matriz.",
+      "As afiliadas seguem em ordem de adesão. Regular (1–24 e 30–32) ou Unique (25–29 e 33).",
+      "Proregen Tubarão (nº 6) tem 2 locais e conta como 1 afiliada.",
+      "Em arquivos públicos e no site, CPF de pessoas físicas é omitido. CNPJ pode constar na cópia canônica e no Notion (privado).",
+      "'—' na planilha foi convertido para nulo/lista vazia. O site da matriz consta como 'Em construção' e não vira URL.",
+      "numero 0 + numero_rotulo \"Matriz\" identifica a sede. Nas afiliadas, numero é o Nº da planilha."
+    ]
+  },
+  "unidades": [
+    {
+      "numero": 0,
+      "numero_rotulo": "Matriz",
+      "e_matriz": true,
+      "local": 1,
+      "nome": "Clínica Proregen (Matriz)",
+      "razao_social_titular": "Proregen Clínica Médica Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Dr. José Mário Mônaco, 333 — sala 302, Centro Comercial São Lucas",
+      "bairro": "Centro",
+      "cidade": "Bento Gonçalves",
+      "uf": "RS",
+      "cep": "95700-066",
+      "telefones": [
+        "(54) 3702-0302",
+        "(54) 99689-1295"
+      ],
+      "n_medicos": 3,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.andrekruel",
+        "@drscarton",
+        "@ortogava"
+      ],
+      "sites": [
+        "Em construção"
+      ],
+      "obs": "Matriz",
+      "lat": -29.1655631,
+      "lon": -51.5144284,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua Doutor José Mario Monaco, Centro, Bento Gonçalves, Rio Grande do Sul, Região Sul, 95700-066, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 1,
+      "numero_rotulo": "1",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Hospital Ortopédico de Passo Fundo",
+      "razao_social_titular": "Associação Hospitalar Ortopédica e Traumatológica de Passo Fundo",
+      "tipo": "CNPJ",
+      "endereco": "Avenida Sete de Setembro, 817",
+      "bairro": "Centro",
+      "cidade": "Passo Fundo",
+      "uf": "RS",
+      "cep": "99010-121",
+      "telefones": [
+        "(54) 2104-4333"
+      ],
+      "n_medicos": 30,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@hohospitalortopedico"
+      ],
+      "sites": [
+        "https://www.hopf.med.br/"
+      ],
+      "obs": "Regular",
+      "lat": -28.2558958,
+      "lon": -52.4148563,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Avenida 7 de Setembro, Centro, Passo Fundo, Rio Grande do Sul, Região Sul, 99020-040, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 2,
+      "numero_rotulo": "2",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Proregen João Pessoa",
+      "razao_social_titular": "L2M Serviços Médicos Hospitalares Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Avenida Senador Ruy Carneiro, 333 — sala 901",
+      "bairro": "Brisamar",
+      "cidade": "João Pessoa",
+      "uf": "PB",
+      "cep": "58032-100",
+      "telefones": [
+        "(83) 99166-6167"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.lucasmmedeiros",
+        "@proregenjp"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -7.1215981,
+      "lon": -34.882028,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "João Pessoa, Paraíba, Região Nordeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 3,
+      "numero_rotulo": "3",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Osteo Ortopedia",
+      "razao_social_titular": "Ortotrauma Clínica de Fraturas Ltda Epp",
+      "tipo": "CNPJ",
+      "endereco": "Rua João Cechinel, 368",
+      "bairro": "Pio Corrêa",
+      "cidade": "Criciúma",
+      "uf": "SC",
+      "cep": "88811-500",
+      "telefones": [
+        "(48) 3437-1788"
+      ],
+      "n_medicos": 19,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@osteoortopedia"
+      ],
+      "sites": [
+        "https://osteoortopedia.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -28.6761266,
+      "lon": -49.3630546,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua João Cechinel, Pio Corrêa, Criciúma, Santa Catarina, Região Sul, 88801-240, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 4,
+      "numero_rotulo": "4",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Revitalle",
+      "razao_social_titular": "Revitalle Proregen",
+      "tipo": "CNPJ",
+      "endereco": "Rua General Estilac Leal, 122",
+      "bairro": "Coqueiros",
+      "cidade": "Florianópolis",
+      "uf": "SC",
+      "cep": "88080-760",
+      "telefones": [
+        "(48) 99188-1044"
+      ],
+      "n_medicos": 5,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drpedrokanan",
+        "@drstefanzolin",
+        "@dr.viniciusbotelho",
+        "@drleandrodavid"
+      ],
+      "sites": [
+        "https://revitalle.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -27.6121134,
+      "lon": -48.5847102,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Centro Médico Revitalle, 122, Rua General Estilac Leal, Coqueiros, Florianópolis, Santa Catarina, Região Sul, 88080-760, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 5,
+      "numero_rotulo": "5",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Vitaville/Vitador Medicina da Dor e Regenerativa",
+      "razao_social_titular": "Vitaville Centro Médico Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua São Paulo, 348",
+      "bairro": "Bucarein",
+      "cidade": "Joinville",
+      "uf": "SC",
+      "cep": "89202-200",
+      "telefones": [],
+      "n_medicos": 2,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@clinica.vitavilleoficial",
+        "@vitador.oficial"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -26.3106179,
+      "lon": -48.8431273,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "348, Rua São Paulo, Bucarein, Joinville, Santa Catarina, Região Sul, 89202-212, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 6,
+      "numero_rotulo": "6",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Proregen Tubarão (local 1: Ortoimagem Centro de Ortopedia)",
+      "razao_social_titular": "Ortotrauma Tubarão Clínica de Ortopedia",
+      "tipo": "CNPJ",
+      "endereco": "Rua Padre Bernardo Freuser, 228",
+      "bairro": "Centro",
+      "cidade": "Tubarão",
+      "uf": "SC",
+      "cep": "88701-140",
+      "telefones": [
+        "(48) 3631-1400",
+        "(48) 3631-1515",
+        "(48) 3631-1500"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.fabriciozanella"
+      ],
+      "sites": [
+        "https://drfabriciozanella.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -28.4807628,
+      "lon": -49.0046278,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua Padre Bernardo Freuser, Centro, Tubarão, Santa Catarina, Região Sul, 88705-000, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 6,
+      "numero_rotulo": "6",
+      "e_matriz": false,
+      "local": 2,
+      "nome": "Proregen Tubarão (local 2: Provida)",
+      "razao_social_titular": "Ortotrauma Tubarão Clínica de Ortopedia",
+      "tipo": "CNPJ",
+      "endereco": "Avenida Marcolino Martins Cabral, 2075",
+      "bairro": "Vila Moema",
+      "cidade": "Tubarão",
+      "uf": "SC",
+      "cep": "88705-001",
+      "telefones": [
+        "(48) 3631-1400",
+        "(48) 3631-1515",
+        "(48) 3631-1500"
+      ],
+      "n_medicos": null,
+      "n_medicos_nota": "(contado na linha acima)",
+      "instagram": [
+        "@dr.fabriciozanella"
+      ],
+      "sites": [
+        "https://drfabriciozanella.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -28.4784454,
+      "lon": -48.9990455,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Avenida Marcolino Martins Cabral, Vila Moema, Tubarão, Santa Catarina, Região Sul, 88705-001, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 7,
+      "numero_rotulo": "7",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Proregen Santa Cruz do Sul",
+      "razao_social_titular": "Clínica Médica Vida",
+      "tipo": "CPF",
+      "endereco": "Rua Marechal Deodoro, 949 — 202",
+      "bairro": "Centro",
+      "cidade": "Santa Cruz do Sul",
+      "uf": "RS",
+      "cep": "96810-102",
+      "telefones": [
+        "(51) 99766-6369"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.robert.wagner"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -29.7200512,
+      "lon": -52.4261019,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua Marechal Deodoro, Centro, Sede Municipal, Santa Cruz do Sul, Rio Grande do Sul, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 8,
+      "numero_rotulo": "8",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Núcleo AG",
+      "razao_social_titular": "Gimenez Cirino Serviços Médicos Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Bororós, 326",
+      "bairro": "Senador Salgado Filho",
+      "cidade": "Marília",
+      "uf": "SP",
+      "cep": "17502-270",
+      "telefones": [
+        "(14) 99901-5002"
+      ],
+      "n_medicos": 2,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.adrianogarciacirino",
+        "@clinica.nucleoag"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -22.2172002,
+      "lon": -49.9500061,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Marília, São Paulo, Região Sudeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 9,
+      "numero_rotulo": "9",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Ideal Center",
+      "razao_social_titular": "Ricardo dos Santos Valença Ferreira",
+      "tipo": "CPF",
+      "endereco": "Avenida Rui Barbosa, 1401",
+      "bairro": "Heliópolis",
+      "cidade": "Garanhuns",
+      "uf": "PE",
+      "cep": "55297-050",
+      "telefones": [
+        "(87) 99808-1593"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drricardoortopedista",
+        "@proregengaranhuns"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -8.8843847,
+      "lon": -36.4818607,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Avenida Rui Barbosa, Heliópolis, Garanhuns, Pernambuco, Região Nordeste, 55298-000, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 10,
+      "numero_rotulo": "10",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Proregen Porto Alegre",
+      "razao_social_titular": "Proregen Porto Alegre",
+      "tipo": "CPF",
+      "endereco": "Rua Gomes Jardim, 201 — sala 617",
+      "bairro": "Santana",
+      "cidade": "Porto Alegre",
+      "uf": "RS",
+      "cep": "90620-130",
+      "telefones": [
+        "(51) 99585-9722"
+      ],
+      "n_medicos": 3,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@joao_mauro",
+        "@drotavioortopedista",
+        "@dralessandrotraumato"
+      ],
+      "sites": [
+        "https://drjoaomauro.com.br/",
+        "https://www.ortopediaportoalegre.com.br/",
+        "https://dralessandrotraumatologia.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -30.1009166,
+      "lon": -51.1887882,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Porto Alegre, Rio Grande do Sul, Região Sul, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 11,
+      "numero_rotulo": "11",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Malaquias",
+      "razao_social_titular": "JM Serviços Médicos Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Elias João Medeiros, 2002 — salas 411 e 412",
+      "bairro": "Bairro Santorini",
+      "cidade": "Xangri-Lá",
+      "uf": "RS",
+      "cep": "95588-000",
+      "telefones": [
+        "(51) 99778-1020"
+      ],
+      "n_medicos": 2,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dreduardomalaquias",
+        "@drjarbasmartini"
+      ],
+      "sites": [
+        "https://clinicamalaquias.com.br/",
+        "https://drjarbasmartini.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -29.8039422,
+      "lon": -50.0413748,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Xangri-lá, Rio Grande do Sul, Região Sul, 95588-000, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 12,
+      "numero_rotulo": "12",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Proregen Carazinho",
+      "razao_social_titular": "Proregen Carazinho",
+      "tipo": "CPF",
+      "endereco": null,
+      "bairro": null,
+      "cidade": "Carazinho",
+      "uf": "RS",
+      "cep": null,
+      "telefones": [],
+      "n_medicos": 2,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drnelsonesteve",
+        "@gilbertoamaral66"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -28.2981634,
+      "lon": -52.7942363,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Carazinho, Rio Grande do Sul, Região Sul, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 13,
+      "numero_rotulo": "13",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Hospital Cazza",
+      "razao_social_titular": "Proregen Chapecó",
+      "tipo": "CPF",
+      "endereco": "Rua Rui Barbosa - D, 200 D",
+      "bairro": "Centro",
+      "cidade": "Chapecó",
+      "uf": "SC",
+      "cep": "89801-042",
+      "telefones": [
+        "(47) 98467-7050"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.felipilazzari"
+      ],
+      "sites": [
+        "https://www.lazzarimed.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -27.1048922,
+      "lon": -52.6107178,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua Rui Barbosa - D, Centro, Chapecó, Santa Catarina, Região Sul, 89801-014, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 14,
+      "numero_rotulo": "14",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "JK Ortopedia e Clínica da Dor",
+      "razao_social_titular": "Proregen Brasília",
+      "tipo": "CPF",
+      "endereco": "Quadra QNL 30 Conjunto A, Lotes 2, 4 e 6 — Loja 3",
+      "bairro": "Taguatinga Norte",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "cep": "72162-301",
+      "telefones": [
+        "(61) 3491-7488",
+        "(61) 99623-4383"
+      ],
+      "n_medicos": 2,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@jkortopedia",
+        "@dralessandroleite",
+        "@dr.lucassena"
+      ],
+      "sites": [
+        "https://ortopediajk.com.br/",
+        "https://drlucassena.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -15.7939869,
+      "lon": -47.8828,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, 70391-900, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 15,
+      "numero_rotulo": "15",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Somma Medicina Integrada",
+      "razao_social_titular": "JPS Serviços de Ortopedia e Traumatologia Dr Juliano Silva Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Sete de Setembro, 510",
+      "bairro": "Centro",
+      "cidade": "Santiago",
+      "uf": "RS",
+      "cep": "97700-240",
+      "telefones": [
+        "(55) 99954-4114",
+        "(55) 99931-6105"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drjulianosilva",
+        "@sommamedicinaintegrada"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -29.1970773,
+      "lon": -54.8667895,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua Sete de Setembro, Centro, Santiago, Rio Grande do Sul, Região Sul, 97700-240, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 16,
+      "numero_rotulo": "16",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Instituto Nobre",
+      "razao_social_titular": "Instituto Nobre Serviços Médicos Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Avenida Antônio Coelho de Carvalho, 1107",
+      "bairro": "Central",
+      "cidade": "Macapá",
+      "uf": "AP",
+      "cep": "68900-015",
+      "telefones": [
+        "(96) 99194-5377",
+        "(96) 99191-2303"
+      ],
+      "n_medicos": 2,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@institutonobre.ap",
+        "@drenzionobre",
+        "@drarafaellanobre"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": 0.0323228,
+      "lon": -51.0639336,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Avenida Antônio Coelho de Carvalho, Central, Macapá, Amapá, Região Norte, 68901-971, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 17,
+      "numero_rotulo": "17",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "CIDORE",
+      "razao_social_titular": "Ortre Ortopedia Especializada Ltda",
+      "tipo": "CPF",
+      "endereco": "Avenida Monsenhor José Aloísio Pinto, 1362 — salas 221/222",
+      "bairro": "Gerardo Cristino",
+      "cidade": "Sobral",
+      "uf": "CE",
+      "cep": "62051-225",
+      "telefones": [
+        "(88) 99275-6141"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drthiagomontalverne"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -3.8565437,
+      "lon": -40.0438895,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Sobral, Ceará, Região Nordeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 18,
+      "numero_rotulo": "18",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Regen",
+      "razao_social_titular": "Clínica Regen Ltda - ME",
+      "tipo": "CNPJ",
+      "endereco": "Avenida T04, 1340 — salas 109 a 116",
+      "bairro": "Setor Bueno",
+      "cidade": "Goiânia",
+      "uf": "GO",
+      "cep": "74230-030",
+      "telefones": [
+        "(62) 99129-7532"
+      ],
+      "n_medicos": 3,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@clinicaregen"
+      ],
+      "sites": [
+        "https://clinicaregen.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -16.680882,
+      "lon": -49.2532691,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Goiânia, Goiás, Região Centro-Oeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 19,
+      "numero_rotulo": "19",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Dr. Everton Fiebig",
+      "razao_social_titular": "Dr Everton Fiebig Serviços Médicos",
+      "tipo": "CNPJ",
+      "endereco": "Av. Santa Terezinha, 243 — sala 5",
+      "bairro": "Centro",
+      "cidade": "Joaçaba",
+      "uf": "SC",
+      "cep": "89600-000",
+      "telefones": [
+        "(49) 99963-6771"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.evertonfiebig"
+      ],
+      "sites": [
+        "https://drevertonfiebig.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -27.1737204,
+      "lon": -51.5065214,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Joaçaba, Santa Catarina, Região Sul, 89600-000, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 20,
+      "numero_rotulo": "20",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Instituto Perez",
+      "razao_social_titular": "Instituto Perez Serviços Médicos Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Senador José Henrique, 231 — sala 1402",
+      "bairro": "Ilha do Leite",
+      "cidade": "Recife",
+      "uf": "PE",
+      "cep": "50070-460",
+      "telefones": [
+        "(81) 98604-0181"
+      ],
+      "n_medicos": 5,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drjoseluizperez"
+      ],
+      "sites": [
+        "https://drjoseluizperez.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -8.0584933,
+      "lon": -34.8848193,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Recife, Pernambuco, Região Nordeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 21,
+      "numero_rotulo": "21",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Médica Maurmann & Modena",
+      "razao_social_titular": "Clínica Médica Maurmann & Modena Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Cônego Peres, 690 — sala 701",
+      "bairro": "Centro",
+      "cidade": "Nova Prata",
+      "uf": "RS",
+      "cep": "95320-000",
+      "telefones": [
+        "(54) 99944-2825",
+        "(54) 3242-7059"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@clinicamaurmannmodena"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -28.7849383,
+      "lon": -51.6091999,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Nova Prata, Rio Grande do Sul, Região Sul, 95320-000, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 22,
+      "numero_rotulo": "22",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Consultório Dr. Márcio Dutra",
+      "razao_social_titular": "Proregen Lajeado",
+      "tipo": "CPF",
+      "endereco": "Avenida Benjamin Constant, 1126 — sala 303",
+      "bairro": "Centro",
+      "cidade": "Lajeado",
+      "uf": "RS",
+      "cep": "95900-104",
+      "telefones": [
+        "(51) 99596-7171"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr.marciodutra"
+      ],
+      "sites": [
+        "https://www.drmarciodutra.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -29.4698886,
+      "lon": -51.9636464,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Avenida Benjamin Constant, Centro, Lajeado, Rio Grande do Sul, Região Sul, 95900-140, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 23,
+      "numero_rotulo": "23",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Dr. Davidson Alba - Neurocirurgião Coluna & Crânio",
+      "razao_social_titular": "Proregen Santa Maria",
+      "tipo": "CPF",
+      "endereco": "Rua Pinheiro Machado, 2366 — 603",
+      "bairro": "Centro",
+      "cidade": "Santa Maria",
+      "uf": "RS",
+      "cep": "97050-600",
+      "telefones": [
+        "(55) 99962-1463",
+        "(55) 3222-5188"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@dr_davidson_alba"
+      ],
+      "sites": [
+        "https://drdavidsonalba.com.br/"
+      ],
+      "obs": "Regular",
+      "lat": -29.6896085,
+      "lon": -53.8041503,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua Pinheiro Machado, Centro Histórico, Centro, Sede, Santa Maria, Rio Grande do Sul, Região Sul, 97050-002, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 24,
+      "numero_rotulo": "24",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Proregen Encantado",
+      "razao_social_titular": "Boaro Serviços de Ortopedia e Traumatologia Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Duque de Caxias, 411 — sala 302",
+      "bairro": "Centro",
+      "cidade": "Encantado",
+      "uf": "RS",
+      "cep": "95960-000",
+      "telefones": [
+        "(51) 98033-4036",
+        "(51) 3620-1073"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@luizhboaro"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -29.2392716,
+      "lon": -51.8744817,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Encantado, Rio Grande do Sul, Região Sul, 95960-000, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 25,
+      "numero_rotulo": "25",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Boas Novas",
+      "razao_social_titular": "Hospital Boas Novas Ltda",
+      "tipo": "CPF + CNPJ",
+      "endereco": "Rua José Alexandre de Freitas, 14",
+      "bairro": "Bela Vista",
+      "cidade": "Ribeirão das Neves",
+      "uf": "MG",
+      "cep": "33805-160",
+      "telefones": [
+        "(31) 3625-1335"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@clinicaboasnovas"
+      ],
+      "sites": [
+        "https://hospitalboasnovas.com.br/"
+      ],
+      "obs": "Unique",
+      "lat": -19.7672898,
+      "lon": -44.0875436,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Ribeirão das Neves, Minas Gerais, Região Sudeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 26,
+      "numero_rotulo": "26",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Nidara",
+      "razao_social_titular": "Pedro Florindo Ribeiro Coelho",
+      "tipo": "CPF + CNPJ",
+      "endereco": "Quadra ARSE 41, Alameda 11, s/n, Lote 3, QR 13",
+      "bairro": "Plano Diretor Sul",
+      "cidade": "Palmas",
+      "uf": "TO",
+      "cep": "77021-641",
+      "telefones": [
+        "(63) 99933-5006"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@clinicanidara",
+        "@drpedroflorindo"
+      ],
+      "sites": [],
+      "obs": "Unique",
+      "lat": -10.1837852,
+      "lon": -48.3336423,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Palmas, Tocantins, Região Norte, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 27,
+      "numero_rotulo": "27",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Acqua Saúde e Imagem",
+      "razao_social_titular": "Daniel Tomaz Lopes",
+      "tipo": "CPF + CNPJ",
+      "endereco": "Rua Alagoas, 396 — sala 1006, Ed. Atrium",
+      "bairro": "Jardim dos Estados",
+      "cidade": "Campo Grande",
+      "uf": "MS",
+      "cep": "79020-120",
+      "telefones": [
+        "(67) 98120-2741"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drdanieltomazlopes"
+      ],
+      "sites": [
+        "https://acquasaude.com/"
+      ],
+      "obs": "Unique",
+      "lat": -20.4640173,
+      "lon": -54.6162947,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Campo Grande, Mato Grosso do Sul, Região Centro-Oeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 28,
+      "numero_rotulo": "28",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "You Institute Saúde Personalizada",
+      "razao_social_titular": "Clínica Médica Dr Franco Ricieri Mazzaro Ltda",
+      "tipo": "CPF + CNPJ",
+      "endereco": "Rua Frei Menandro Kamps, 257 — sala 103",
+      "bairro": "Centro",
+      "cidade": "Canoinhas",
+      "uf": "SC",
+      "cep": "89460-126",
+      "telefones": [
+        "(47) 99111-2699"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@youinstitutecanoinhas"
+      ],
+      "sites": [],
+      "obs": "Unique",
+      "lat": -26.1755121,
+      "lon": -50.3949592,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Canoinhas, Santa Catarina, Região Sul, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 29,
+      "numero_rotulo": "29",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Avivah",
+      "razao_social_titular": "Silvia Ataide da Silva",
+      "tipo": "CPF + CNPJ",
+      "endereco": "Rua dos Mundurucos, 3100 — Ed. Metropolitan Tower, sobreloja sala 10",
+      "bairro": null,
+      "cidade": "Belém",
+      "uf": "PA",
+      "cep": "66040-033",
+      "telefones": [
+        "(91) 98552-8000"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@clinica.avivah",
+        "@draataide"
+      ],
+      "sites": [],
+      "obs": "Unique",
+      "lat": -1.45056,
+      "lon": -48.4682453,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Belém, Pará, Região Norte, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 30,
+      "numero_rotulo": "30",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Dr. Rodolfo Fonseca de Padua Gonçalves",
+      "razao_social_titular": "Rodolfo Fonseca de Padua Gonçalves",
+      "tipo": "CPF",
+      "endereco": "Av. Dra. Damina Zakhian, 33",
+      "bairro": "Centro",
+      "cidade": "Lavras",
+      "uf": "MG",
+      "cep": "37200-164",
+      "telefones": [
+        "(35) 3821-4755",
+        "(35) 99954-1409"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@rodolfo.ortopedia"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -21.2425512,
+      "lon": -44.9991978,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Lavras, Minas Gerais, Região Sudeste, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 31,
+      "numero_rotulo": "31",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Santa Mônica",
+      "razao_social_titular": "Paulo Roberto Marques Junior",
+      "tipo": "CPF + CNPJ",
+      "endereco": "Av. Rio Grande do Sul, 877S",
+      "bairro": "Menino Deus",
+      "cidade": "Lucas do Rio Verde",
+      "uf": "MT",
+      "cep": "78466-507",
+      "telefones": [
+        "(65) 3549-5230"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@drpaulomarquesjr"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -13.0728844,
+      "lon": -55.9288318,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Avenida Rio Grande do Sul, Menino Deus, Lucas do Rio Verde, Mato Grosso, Região Centro-Oeste, 78455-000, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    },
+    {
+      "numero": 32,
+      "numero_rotulo": "32",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Instituto de Saúde",
+      "razao_social_titular": "Clínica Médica Dr Everton Oliveira Ltda",
+      "tipo": "CNPJ",
+      "endereco": "Rua Mário Prandini, 742",
+      "bairro": "Centro",
+      "cidade": "Itapeva",
+      "uf": "SP",
+      "cep": "18400-170",
+      "telefones": [
+        "(15) 3521-8307",
+        "(15) 99166-2361 (WhatsApp)"
+      ],
+      "n_medicos": 1,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@everton.ortop"
+      ],
+      "sites": [],
+      "obs": "Regular",
+      "lat": -23.9825298,
+      "lon": -48.8772473,
+      "geocoding": {
+        "ok": true,
+        "source": "endereco",
+        "display_name": "Rua Mário Prandini, Vila Nova, Centro, Itapeva, São Paulo, Região Sudeste, 18400-900, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17",
+        "nota": "Nominatim devolveu a rua, não o número 742."
+      }
+    },
+    {
+      "numero": 33,
+      "numero_rotulo": "33",
+      "e_matriz": false,
+      "local": 1,
+      "nome": "Clínica Dworzecki",
+      "razao_social_titular": "Mediclife Assistência Médica Ltda ME",
+      "tipo": "CNPJ",
+      "endereco": "Rua Júlio de Castilhos, 755 — sala 2",
+      "bairro": "Centro",
+      "cidade": "Camaquã",
+      "uf": "RS",
+      "cep": "96780-072",
+      "telefones": [
+        "(51) 3671-1201"
+      ],
+      "n_medicos": 2,
+      "n_medicos_nota": null,
+      "instagram": [
+        "@marcelo.dworzecki",
+        "@jaquelinelessapinheiro"
+      ],
+      "sites": [],
+      "obs": "Unique",
+      "lat": -30.8524752,
+      "lon": -51.8075619,
+      "geocoding": {
+        "ok": true,
+        "source": "cidade",
+        "display_name": "Camaquã, Rio Grande do Sul, Região Sul, Brasil",
+        "provider": "Nominatim/OSM",
+        "data": "2026-11-17"
+      }
+    }
+  ]
+}
