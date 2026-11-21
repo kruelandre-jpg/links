@@ -34,7 +34,8 @@
       "Em arquivos públicos e no site, CPF de pessoas físicas é omitido. CNPJ pode constar na cópia canônica e no Notion (privado).",
       "'—' na planilha foi convertido para nulo/lista vazia. O site da matriz consta como 'Em construção' e não vira URL.",
       "numero 0 + numero_rotulo \"Matriz\" identifica a sede. Nas afiliadas, numero é o Nº da planilha.",
-      "Em 21/11/2026, por decisão do André, a Clínica Dr. Everton Fiebig (Joaçaba/SC, nº 19) saiu da rede. A unidade e o médico exclusivo (Dr. Everton Fiebig) foram retirados desta lista oficial. Os demais números de adesão não foram renumerados. Santa Catarina permanece na rede por outras unidades (incluindo Tubarão)."
+      "Em 21/11/2026, por decisão do André, a Clínica Dr. Everton Fiebig (Joaçaba/SC, nº 19) saiu da rede. A unidade e o médico exclusivo (Dr. Everton Fiebig) foram retirados desta lista oficial. Os demais números de adesão não foram renumerados. Santa Catarina permanece na rede por outras unidades (incluindo Tubarão).",
+      "Em 21/11/2026 o André confirmou o endereço de Nova Prata (nº 21) como Avenida Cônego Peres, 690 (não Rua). A sala 701 foi mantida."
     ]
   },
   "unidades": [
@@ -789,7 +790,7 @@
       "nome": "Clínica Médica Maurmann & Modena",
       "razao_social_titular": "Clínica Médica Maurmann & Modena Ltda",
       "tipo": "CNPJ",
-      "endereco": "Rua Cônego Peres, 690 — sala 701",
+      "endereco": "Avenida Cônego Peres, 690 — sala 701",
       "bairro": "Centro",
       "cidade": "Nova Prata",
       "uf": "RS",
