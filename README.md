@@ -11,4 +11,4 @@ Para trocar o presente, edite em `index.html` o comentário `PRESENTE`: o rótul
 
 A lista pública das unidades fica em `clinicas.html`, gerada por `scripts/build_clinicas.py` a partir de `data/unidades.json` (sem CPF). A fonte canônica, privada, está em `/workspace/clinicas/`.
 
-O botão “Encontre uma clínica Proregen” ainda abre o mapa no Manus. A contagem do botão (matriz + afiliadas) é atualizada pelo script de build. Não troque o destino do botão sem o André autorizar.
+O botão “Encontre uma clínica Proregen” abre o mapa 3D no Manus (https://proregen3d-eqfgf7qq.manus.space). A lista estática em `clinicas.html` permanece no repositório. A contagem do botão (matriz + afiliadas) é atualizada pelo script de build. Não troque o destino do botão sem o André autorizar.
