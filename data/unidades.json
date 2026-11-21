@@ -2,12 +2,12 @@
   "meta": {
     "fonte": "Planilha oficial enviada por André Kruel em 17/11/2026 (abas Unidades e Corpo Clínico), já com a matriz na primeira linha. Origem declarada na planilha: sistema Proregen, informações da equipe e pesquisa, atualizado em 17/11/2026. Uma versão anterior do mesmo dia, sem a matriz na aba Unidades, foi substituída por esta.",
     "arquivo_origem": "clinicas-proregen-2026-11-17.xlsx",
-    "atualizado_em": "2026-11-17",
+    "atualizado_em": "2026-11-21",
     "versao": 1,
     "total_matriz": 1,
-    "total_afiliadas": 33,
-    "total_unidades_incluindo_matriz": 34,
-    "total_locais": 35,
+    "total_afiliadas": 32,
+    "total_unidades_incluindo_matriz": 33,
+    "total_locais": 34,
     "estados": 13,
     "inclui_df": true,
     "ufs": [
@@ -26,14 +26,15 @@
       "SP",
       "TO"
     ],
-    "texto_contagem": "a matriz e 33 afiliadas em 13 estados e o DF",
+    "texto_contagem": "a matriz e 32 afiliadas em 13 estados e o DF",
     "observacoes": [
       "A matriz (Clínica Proregen, Bento Gonçalves/RS) vem na primeira linha, com Nº = \"Matriz\" e Obs. = Matriz.",
       "As afiliadas seguem em ordem de adesão. Regular (1–24 e 30–32) ou Unique (25–29 e 33).",
       "Proregen Tubarão (nº 6) tem 2 locais e conta como 1 afiliada.",
       "Em arquivos públicos e no site, CPF de pessoas físicas é omitido. CNPJ pode constar na cópia canônica e no Notion (privado).",
       "'—' na planilha foi convertido para nulo/lista vazia. O site da matriz consta como 'Em construção' e não vira URL.",
-      "numero 0 + numero_rotulo \"Matriz\" identifica a sede. Nas afiliadas, numero é o Nº da planilha."
+      "numero 0 + numero_rotulo \"Matriz\" identifica a sede. Nas afiliadas, numero é o Nº da planilha.",
+      "Em 21/11/2026, por decisão do André, a Clínica Dr. Everton Fiebig (Joaçaba/SC, nº 19) saiu da rede. A unidade e o médico exclusivo (Dr. Everton Fiebig) foram retirados desta lista oficial. Os demais números de adesão não foram renumerados. Santa Catarina permanece na rede por outras unidades (incluindo Tubarão)."
     ]
   },
   "unidades": [
@@ -741,41 +742,6 @@
         "ok": true,
         "source": "cidade",
         "display_name": "Goiânia, Goiás, Região Centro-Oeste, Brasil",
-        "provider": "Nominatim/OSM",
-        "data": "2026-11-17"
-      }
-    },
-    {
-      "numero": 19,
-      "numero_rotulo": "19",
-      "e_matriz": false,
-      "local": 1,
-      "nome": "Clínica Dr. Everton Fiebig",
-      "razao_social_titular": "Dr Everton Fiebig Serviços Médicos",
-      "tipo": "CNPJ",
-      "endereco": "Av. Santa Terezinha, 243 — sala 5",
-      "bairro": "Centro",
-      "cidade": "Joaçaba",
-      "uf": "SC",
-      "cep": "89600-000",
-      "telefones": [
-        "(49) 99963-6771"
-      ],
-      "n_medicos": 1,
-      "n_medicos_nota": null,
-      "instagram": [
-        "@dr.evertonfiebig"
-      ],
-      "sites": [
-        "https://drevertonfiebig.com.br/"
-      ],
-      "obs": "Regular",
-      "lat": -27.1737204,
-      "lon": -51.5065214,
-      "geocoding": {
-        "ok": true,
-        "source": "cidade",
-        "display_name": "Joaçaba, Santa Catarina, Região Sul, 89600-000, Brasil",
         "provider": "Nominatim/OSM",
         "data": "2026-11-17"
       }
